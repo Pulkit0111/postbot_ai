@@ -21,5 +21,5 @@ def generate_tweet_from_topic(topic):
         if feedback.lower() == "done":
             return draft
         else:
-            revision_prompt = f"Rewrite the following tweet based on this feedback:\n\nTweet:\n{draft}\n\nFeedback:\n{feedback}"
+            revision_prompt = f"Rewrite the following tweet based on this feedback:\n\nTweet:\n{draft}\n\nFeedback:\n{feedback}, go theough summary again and make sure it is relevant to the topic, here is the summary: {summary}"
             draft = get_response(revision_prompt)
